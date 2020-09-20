@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -8,9 +9,10 @@ const Home = () => {
     <div className='App'>
       <div className='row'>
         <div className='col'>
-          <div className='alert alert-info'> {t('title')} </div>{' '}
-        </div>{' '}
-      </div>{' '}
+          <div className='alert alert-info'> {t('title')} </div>
+          <Link to='/loader'>Loader</Link>
+        </div>
+      </div>
     </div>
   );
 };
